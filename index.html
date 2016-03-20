@@ -1,69 +1,377 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+layout_grid: true
+home: true
+angularjs: true
+title: JHipster home
+sitemap:
+    priority: 1.0
+    lastmod: 2014-10-21T00:00:00-00:00
+---
+<div ng-app="jhipster.home" ng-controller="HomeController" class="home-container">
+    <!-- Header -->
+    <header class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo-big"><img class="img-responsive" src="img/logo-jhipster-drink-coffee.png" alt=""></div>
+                    <div class="intro-text">
+                        <span class="brand">Greetings, Java Hipster!</span>
+                        <hr class="star-light">
+                        <div class="row stats">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <a href="https://www.npmjs.com/package/generator-jhipster" target="_blank">
+                                    <div class="card dark summary-inline">
+                                        <div class="card-body">
+                                            <i class="icon fa fa-download fa-3x"></i>
+                                            <div class="content" ng-cloak>
+                                                <div class="title">{(npmDownloads)}</div>
+                                                <div class="sub-title">Downloads in last 30 days</div>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank">
+                                    <div class="card dark summary-inline">
+                                        <div class="card-body">
+                                            <i class="icon fa fa-github fa-3x"></i>
+                                            <div class="content" ng-cloak>
+                                                <div class="title">{(gitConfig.stargazers_count)}</div>
+                                                <div class="sub-title">Stars</div>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <a href="https://github.com/jhipster/generator-jhipster/contributors" target="_blank">
+                                    <div class="card dark summary-inline">
+                                        <div class="card-body">
+                                            <i class="icon fa fa-users fa-3x"></i>
+                                            <div class="content" ng-cloak>
+                                                <div class="title">{(gitConftributors)}</div>
+                                                <div class="sub-title">Contributors</div>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- about and news section -->
+    <section id="about" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="brand">JHipster news and events</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <p>
+                            <ul>
+                                <li>Rikard Thulin and Ola Petersson will present JHipster at the <a href="http://www.javaforum.se/jf/?meeting=146" target="_blank">Stockholm JavaForum</a> in Stockholm, Sweden on March, 22nd</li>
+                                <li>The <a href="http://www.meetup.com/fr-FR/JHipster-User-Group/events/229603142/" target="_blank">Paris JHipster meetup #3</a> will be hosted in Paris, France on April, 11th</li>
+                                <li>Julien Dubois and Matt Raible will both present <a href="http://devoxx.fr/" target="_blank">a JHipster talk at Devoxx France</a> in Paris, France on April, 21st and 22nd</li>
+                                <li>Matt Raible will do his <a href="http://cfp.devoxx.co.uk/2016/talk/OLG-0920/Get_Hip_with_JHipster:_Spring_Boot_+_AngularJS_+_Bootstrap" target="_blank">Get Hip with JHipster talk</a> at Devoxx UK in London, UK on June 8th-10th</li>
+                                <li>Ippon USA will host <a href="http://www.ipponusa.com/training/jhipster-master/" target="_blank">a JHipster training</a> in Washington, DC on July, 27th</li>
+                                <li>The JHipster mini-book by Matt Raible <a href="http://www.infoq.com/minibooks/jhipster-mini-book" target="_blank">is available for free at InfoQ</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="brand">What is JHipster?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <span class="title text-center">
+                    <div class="head-icons">
+                        <a href="http://yeoman.io/" target="_blank"><img src="img/logo-yeoman.png" class="project-icon img-responsive"></a> <i class="fa fa-4x">+</i>
+                        <a href="http://projects.spring.io/spring-boot/" target="_blank"><img src="img/logo-spring-boot.png" class="project-icon img-responsive"></a> <i class="fa fa-4x">+</i> <a href="https://angularjs.org/" target="_blank"><img src="img/logo-angularjs.png" class="project-icon img-responsive"></a><br class="visible-xs"> <i class="fa fa-4x">=</i> <a href="/"><img src="img/logo-jhipster-small2x.png" class="project-icon img-responsive"></a>
+                    </div>
+                    <p class="lead">
+                        JHipster is a
+                        <a href="http://yeoman.io/" target="_blank">Yeoman generator</a>,
+                        used to create a
+                        <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> + <a href="https://angularjs.org/" target="_blank">AngularJS</a>
+                        project. <br>
+                    </p>
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="hipster-font brand">Goal</h2>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Pdf4j.github.com : Public subdomain pdf4j.github.com pages" />
+                    <p>
+                        Our goal is to generate for you a complete and modern Web app, unifying:
+                    </p>
+                    <ul>
+                        <li>A high-performance and robust Java stack on the server side with Spring Boot</li>
+                        <li>A sleek, modern, mobile-first front-end with AngularJS and Bootstrap</li>
+                        <li>A powerful workflow to build your application with Yeoman, Bower, Gulp and Maven</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="hipster-font brand">Sample &amp; Sources</h2>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+                    <p>
+                        You can checkout a sample generated application
+                        <a href="https://github.com/jhipster/jhipster-sample-app" target="_blank">here</a>.
+                    </p>
 
-    <title>Pdf4j.github.com</title>
-  </head>
+                    <p>
+                        JHipster is Open Source, and all development is done on
+                        <a href="https://github.com/jhipster/generator-jhipster" target="_blank">GitHub</a>
+                    </p>
+                    <ul>
+                        <li> If you want to code with us, feel free to join!</li>
+                        <li> If you like the project, please give us a star on GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
+    <!-- Stack Section -->
+    <section class="success home-section" id="opts">
+        <div class="row no-margin">
+            <div class="col-lg-12 text-center">
+                <h2 class="brand">Client side options</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row stack-container no-margin">
+            <ul class="text-center stacks">
+                <li class="clip img-circle">
+                    <img src="img/svg/html-5.svg" />
+                    <span class="title_sub_tech">HTML5</span>
+                </li>
+                <li class="clip img-circle">
+                    <img src="img/svg/css-3.svg" />
+                    <span class="title_sub_tech">CSS3</span>
+                </li>
+                <li class="clip img-circle">
+                    <img src="img/svg/bootstrap.svg" />
+                    <span class="title_sub_tech">Bootstrap</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/angular.svg" />
+                    <span class="title_sub_tech">AngularJS</span>
+                </li>
+                <li class="clip img-circle">
+                    <img src="img/svg/jquery.svg" class="width white-inv"/>
+                    <span class="title_sub_tech">JQuery</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/websocket.png" class="invert-hover"/>
+                    <span class="title_sub_tech">Websockets</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/bower.svg"/>
+                    <span class="title_sub_tech">Bower</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/gulp.svg" class="height" />
+                    <span class="title_sub_tech">Gulp</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/sass.svg" class="height" />
+                    <span class="title_sub_tech">Sass</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/browsersync.svg" />
+                    <span class="title_sub_tech">Browsersync</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/karma.svg" />
+                    <span class="title_sub_tech">Karma</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/protarctor.png" />
+                    <span class="title_sub_tech">Protractor</span>
+                </li>
+                <li class="clear"></li>
+            </ul>
+        </div>
+        <div class="row no-margin">
+            <div class="col-lg-12 text-center">
+                <h2 class="brand">Server side options</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row no-margin">
+            <ul class="text-center stacks">
+                <li class="clip img-circle">
+                    <img src="img/icons/spring-boot.png" />
+                    <span class="title_sub_tech">Spring Boot</span>
+                </li>
+                <li class="clip img-circle">
+                    <img src="img/icons/spring.png"/>
+                    <span class="title_sub_tech">Spring Security</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/netflix.png"/>
+                    <span class="title_sub_tech">Netflix OSS</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/gradle-new.png" class="white-inv"/>
+                    <span class="title_sub_tech">Gradle</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/maven.png" class="white-inv width" />
+                    <span class="title_sub_tech">Maven</span>
+                </li>
+                <li class="clip img-circle">
+                    <img src="img/svg/hibernate.svg" />
+                    <span class="title_sub_tech">Hibernate</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/liquibase.gif" class="width" />
+                    <span class="title_sub_tech">Liquibase</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/mysql.svg" />
+                    <span class="title_sub_tech">MySQL</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/postgresql.svg" class="height" />
+                    <span class="title_sub_tech">PostgreSQL</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/oracle.svg" class="width" />
+                    <span class="title_sub_tech">Oracle</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/mongo.png" class="invert-hover"/>
+                    <span class="title_sub_tech">MongoDB</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg//cassandra.svg" class="white-inv" />
+                    <span class="title_sub_tech">Cassandra</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/ehcache.png" />
+                    <span class="title_sub_tech">EhCache</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/Hazelcast.png" class="white-inv" />
+                    <span class="title_sub_tech">Hazelcast</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/elasticsearch.svg"/>
+                    <span class="title_sub_tech">ElasticSearch</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/thymeleaf.png"/>
+                    <span class="title_sub_tech">Thymeleaf</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/icons/gatling.png"/>
+                    <span class="title_sub_tech">Gatling</span>
+                </li>
+                <li class="clip img-circle new">
+                    <img src="img/svg/cucumber.svg"/>
+                    <span class="title_sub_tech">Cucumber</span>
+                </li>
+                <li class="clear"></li>
+            </ul>
+        </div>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/pdf4j">View on GitHub</a>
+    <!-- quick start Section -->
+    <section class="home-section" id="quick">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="brand">Quick Start</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <p>Install JHipster <code>npm install -g generator-jhipster</code></p>
+                    <p>Create a new directory and go into it <code>mkdir myApp && cd myApp</code></p>
+                    <p>Run JHipster and follow instructions on screen <code>yo jhipster</code></p>
+                    <p>Model your entities with <a href="{{ site.url }}/jdl-studio/" target="_blank">JDL Studio</a> and generate them with <code>yo jhipster:import-jdl yourJdlFile.jh</code></p>
+                </div>
+                <div class="col-lg-12">
+                    <p><small>* Assuming you have already installed <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java</a>, <a href="http://git-scm.com/" target="_blank">Git</a>, <a href="http://nodejs.org/" target="_blank">Node.js</a>, <a href="http://bower.io/#install-bower" target="_blank">Bower</a>, <a href="http://yeoman.io/learning/index.html" target="_blank">Yeoman</a> and <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md" target="_blank">Gulp</a></small></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          <h1 id="project_title">Pdf4j.github.com</h1>
-          <h2 id="project_tagline">Public subdomain pdf4j.github.com pages</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+    <!-- Contact Section -->
+    <section class="success home-section" id="modules" ng-controller="ModuleListCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="brand">Modules</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">                    
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <input type="text" ng-model="searchText" class="form-control search-text" placeholder="Search" id="name" required data-validation-required-message="Please enter a module to search">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <p>Top trending modules</p>
+                <br>
+            </div>
+            <div class="row">
+                <div ng-cloak ng-repeat="module in modules | filter: searchText | orderBy: '-downloads' | limitTo:16">
+                    <div class="clearfix" ng-if="$index % 4 == 0"></div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <a ng-href="{{ site.url }}/modules/marketplace/#/details/{(module.name[0])}"
+                            title="{(module.description[0])}">
+                            <div class="card dark module summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-cube fa-3x"></i>
+                                    <div class="content">
+                                        <div class="title fontSmall">{(module.name[0] | jhiModuleFilter)}</div>
+                                        <div class="sub-title"><span class="fa fa-user"></span> &nbsp; {(module.author.join(','))} &nbsp; | &nbsp; <span class="fa fa-download"></span> &nbsp; {(module.downloads)}</div>                                        
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "http://jhipster.github.io",
+  "logo": "http://jhipster.github.io/images/logo-jhipster.png",
+  "name" : "JHipster",
+  "sameAs" : [ "https://twitter.com/java_hipster",
+    "https://github.com/jhipster/generator-jhipster"]
+}
+</script>
