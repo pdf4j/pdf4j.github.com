@@ -42,7 +42,7 @@ Through Jenkins administration, add a Maven automatic installer from Apache's si
 Install Jenkins NodeJS plugin.
 
 Through Jenkins administration, add a NodeJS instllation:
-- automatic installer from nodejs.org, latest stable 4.xx.xx version
+- automatic installer from nodejs.org, latest stable 4.xx.xx version (5.x.x versions tested and working).
 - Global npm packages to install: bower gulp
 
 This way you can easily configure different versions of NodeJS if you need them in the future.
